@@ -1,0 +1,16 @@
+set-inform http://10.105.1.11:8080/inform
+configure
+set service nat rule 6000 disable
+set service nat rule 6001 disable
+set service nat rule 6002 disable
+set service nat rule 6003 disable
+delete service nat rule 6000
+delete service nat rule 6001
+delete service nat rule 6002
+delete service nat rule 6003
+delete interfaces ethernet eth0 firewall
+delete interfaces ethernet eth1 firewall in
+delete interfaces ethernet eth1 firewall local
+delete interfaces ethernet eth2 firewall
+commit ; save
+exit

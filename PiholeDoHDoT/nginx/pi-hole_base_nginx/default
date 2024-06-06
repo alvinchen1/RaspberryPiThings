@@ -18,15 +18,18 @@ server {
         fastcgi_param SCRIPT_FILENAME $document_root/$fastcgi_script_name;
         fastcgi_pass unix:/run/php/php7.3-fpm.sock;
         fastcgi_param FQDN true;
+        auth_basic "off";
     }
 
     location /*.js {
         index pihole/index.js;
+        auth_basic "off";
     }
 
     location /admin {
         root /var/www/html;
         index index.php index.html index.htm;
+        auth_basic "off";
     }
 
     location ~ /\.ht {

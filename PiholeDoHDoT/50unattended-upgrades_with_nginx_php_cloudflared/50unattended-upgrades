@@ -31,6 +31,8 @@ Unattended-Upgrade::Origins-Pattern {
         "origin=Debian,codename=${distro_codename},label=Debian";
         "origin=Debian,codename=${distro_codename},label=Debian-Security";
         "origin=Debian,codename=${distro_codename}-security,label=Debian-Security";
+        "origin=Raspbian,codename=${distro_codename},label=Raspbian";
+        "origin=Raspberry Pi Foundation,codename=${distro_codename},label=Raspberry Pi Foundation";
 
         // Archive or Suite based matching:
         // Note that this will silently match a different release after
@@ -38,11 +40,9 @@ Unattended-Upgrade::Origins-Pattern {
         // new stable).
         "o=Debian,a=stable";
         "o=Debian,a=stable-updates";
-        "origin=Raspbian,codename=${distro_codename},label=Raspbian";
-        "origin=Raspberry Pi Foundation,codename=${distro_codename},label=Raspberry Pi Foundation";
-        "o=Debian,a=proposed-updates";
         "o=cloudflared,c=main";
         "o=deb.sury.org,c=main";
+//      "o=Debian,a=proposed-updates";
 //      "o=Debian Backports,a=${distro_codename}-backports,l=Debian Backports";
 };
 

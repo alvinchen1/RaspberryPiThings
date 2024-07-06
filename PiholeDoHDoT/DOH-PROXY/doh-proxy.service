@@ -1,0 +1,12 @@
+
+[Unit]
+Description=DoH Proxy
+After=network.target
+
+[Service]
+ExecStart=doh-proxy --upstream-resolver=::1 --listen-address 10.104.1.3 --certfile=/etc/letsencrypt/live/star.alvinchen.net/fullchain.pem --keyfile=/etc/letsencrypt/live/star.alvinchen.net/privkey.pem
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
